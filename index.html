@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="Alif Khan">
+  <link rel="icon" href="https://raw.githubusercontent.com/AlifKhan1911391/NASA-Website-Clone/refs/heads/main/nasa-logo.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <title>NASA Website Clone</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
+    
+    #image-body {
+      background: url('https://raw.githubusercontent.com/AlifKhan1911391/NASA-Website-Clone/refs/heads/main/Screenshot_20250808-185118.jpg') no-repeat;
+      background-size: cover;
+      background-attachment: local; /* This makes the image scroll with content */
+      color: white;
+      padding: 0 20px 20px; /* Removed top padding */
+      min-height: 100vh;
+    }
+    
+    #head {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
+      padding: 10px 0; /* Removed vertical padding */
+      background-color: rgba(0, 0, 0, 0.5);
+      position: relative; /* Ensures header stays at top */
+    }
+    
+    /* Rest of your original CSS remains exactly the same */
+    #head img, #bg-button{
+      height: 40px;
+    }
+    
+    #head i {
+      font-size: 20px;
+      color: white;
+    }
+    
+    .hamburger-menu {
+      background: transparent;
+      border: none;
+      color: white;
+      font-size: 24px;
+      cursor: pointer;
+      padding: 10px 15px;
+    }
+
+    .hamburger-menu:hover {
+      opacity: 0.7;
+    }
+
+    #mission {
+      background-color: #e53935;
+      color: white;
+      font-size: 18px;
+      font-weight: bold;
+      padding: 14px 28px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      text-align: center;
+      display: inline-block;
+      text-transform: none;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+      transition: background-color 0.3s ease;
+      width: 90%;
+    } 
+    
+    .center {
+      display: flex;
+      justify-content: center;
+      margin-top: 20px;
+    }
+    
+    h1 {
+      margin-top: 50px;
+      font-size: 2.5em;
+    }
+    
+    p {
+      max-width: 600px;
+      line-height: 1.6;
+    }
+     .space-wrapper {
+      padding: 60px 30px;
+      background: url('https://www.nasa.gov/sites/default/files/thumbnails/image/iss070e003915.jpg') no-repeat center center/cover;
+      color: white;
+      max-width: 600px;
+    }
+
+    .space-line {
+      border: none;
+      border-top: 1px solid rgba(255, 255, 255, 0.3);
+      margin: 30px 0 10px;
+    }
+
+    .space-label {
+      letter-spacing: 4px;
+      font-size: 13px;
+      color: #ccc;
+      text-transform: uppercase;
+    }
+
+    .space-title-row {
+      font-size: 22px;
+      font-weight: bold;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-top: 5px;
+    }
+
+    .space-arrow {
+      background-color: #ff3e3e;
+      color: white;
+      border-radius: 50%;
+      padding: 6px 9px;
+      font-weight: bold;
+      font-size: 14px;
+      text-decoration: none;
+      transition: background-color 0.3s ease;
+    }
+
+    .space-arrow:hover {
+      background-color: #e60000;
+    }
+  </style>
+</head>
+<body>
+  <div id="image-body">   
+    <div id="head">
+      <button class="hamburger-menu" aria-label="Menu" aria-expanded="false">
+        <i class="fas fa-bars"></i>
+      </button>
+      <img src="https://raw.githubusercontent.com/AlifKhan1911391/NASA-Website-Clone/refs/heads/main/nasa-logo.svg">
+      <i class="fa-solid fa-magnifying-glass"></i>   
+    </div>
+<div><img src="https://raw.githubusercontent.com/AlifKhan1911391/NASA-Website-Clone/refs/heads/main/54643775721-88257121ba-o%20(1).jpg" id="bg-button" style="border-radius:50px;"> <img src="https://raw.githubusercontent.com/AlifKhan1911391/NASA-Website-Clone/refs/heads/main/Screenshot_20250808-200518.jpg" style="border-radius:50px; height:55px;"></div>
+    <h1>NASA's SpaceX<br>Crew-10</h1>
+    <p>NASA and SpaceX are targeting no earlier than 6:05 p.m. EDT, Friday, Aug. 8, for the unlocking of the agency's SpaceX Crew-10 mission from the International Space Station. Crew-10 will be the first mission to splash down off the California coast for the agency's Commercial Crew Program.</p>
+    <div class="center">
+      <button id="mission">Mission Updates</button>
+    </div>
+    <div class="space-wrapper">
+    <hr class="space-line">
+    <div class="space-label">MISSION COVERAGE</div>
+    <div class="space-title-row">
+      The Return of Crew-10
+      <a href="#" class="space-arrow">↗</a>
+    </div>
+
+    <hr class="space-line">
+    <div class="space-label">MISSION SCIENCE</div>
+    <div class="space-title-row">
+      Research Milestones
+      <a href="#" class="space-arrow">↗</a>
+    </div>
+
+    <hr class="space-line">
+    <div class="space-label">MISSION CREW</div>
+    <div class="space-title-row">
+      Houston We Have a Podcast
+      <a href="#" class="space-arrow">↗</a>
+    </div>
+  </div>
+  </div> 
+  <script>
+    document.querySelector('.hamburger-menu').addEventListener('click', function() {
+      const icon = this.querySelector('i');
+      const expanded = this.getAttribute('aria-expanded') === 'true';
+      
+      // Toggle between bars and times (X) icon
+      if (expanded) {
+        icon.classList.remove('fa-times');
+        icon.classList.add('fa-bars');
+      } else {
+        icon.classList.remove('fa-bars');
+        icon.classList.add('fa-times');
+      }
+      
+      this.setAttribute('aria-expanded', !expanded);
+    });
+  </script>
+</body>
+</html
